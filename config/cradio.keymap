@@ -54,10 +54,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ BRIGHT+  │  7       │  8       │  9       │          │   │ INSERT   │ PAGE DN  │ PAGE UP  │ DEL      │          │
-            &kp BRI_UP &kp N7     &kp N8     &kp N9     &kp TAB        &kp INS   &kp PG_DN  &kp PG_UP  &kp DEL    &kp BSPC
+            &kp C_BRI_UP &kp N7   &kp N8     &kp N9     &kp TAB        &kp INS   &kp PG_DN  &kp PG_UP  &kp DEL    &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ BRIGHT-  │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │          │
-            &kp BRI_DN &kp N4     &kp N5     &kp N6     &kp ESC        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp PSCRN
+            &kp C_BRI_DN &kp N4   &kp N5     &kp N6     &kp ESC        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp PSCRN
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 0        │  1       │  2       │  3       │  CAPS    │   │ HOME     │          │          │ END      │          │
             &kp N0     &kp N1     &kp N2     &kp N3     &caps_word     &kp HOME   &trans     &trans     &kp END    &trans
