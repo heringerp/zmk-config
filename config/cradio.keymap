@@ -70,14 +70,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  &       │  *       │  +       │  (       │   │  )       │  '       │  "       │  RALT    │  ~       │
-           &kp C_VOL_UP &kp AMPS  &kp ASTRK  &kp PLUS   &kp LPAR       &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &trans
+        //│          │  &       │  *       │  +       │  (       │   │  )       │  '       │  "       │  RALT    │          │
+           &kp C_VOL_UP &kp AMPS  &kp ASTRK  &kp PLUS   &kp LPAR       &kp RPAR   &kp APOS  &kp DQT     &kp RALT   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  $       │  %       │  ^       │  [       │   │  ]       │  -       │  =       │  `       │  `       │
-           &kp C_MUTE  &kp DLLR   &kp PRCNT  &kp CARET  &kp LBKT       &kp ASTRK  &kp MINUS  &kp EQUAL  &kp GRAVE  &trans
+        //│  !       │  $       │  %       │  ^       │  [       │   │  ]       │  -       │  =       │  `       │          │
+           &kp C_MUTE  &kp DLLR   &kp PRCNT  &kp CARET  &kp LBKT       &kp RBKT   &kp MINUS  &kp EQUAL  &kp GRAVE  &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  !       │  @       │  #       │  {       │   │  }       │  _       │  |       │  ~       │  \       │
-           &kp C_VOL_DN &kp EXCL  &kp AT     &kp HASH   &kp LBRC       &kp AMPS   &kp UNDER  &kp PIPE   &kp TILDE  &kp BSLH
+           &kp C_VOL_DN &kp EXCL  &kp AT     &kp HASH   &kp LBRC       &kp RBRC   &kp UNDER  &kp PIPE   &kp TILDE  &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
