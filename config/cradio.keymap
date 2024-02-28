@@ -8,7 +8,7 @@
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LALT k1  &ht LCTRL k2  &ht LGUI k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RGUI k2  &ht RCTRL k3  &ht LALT k4
-#define CSPACE &ht LCTRL SPACE 
+#define CTHT(k1) &ht LCTRL k1 
 
 / {
     behaviors {
@@ -46,7 +46,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &ht        &mo 1          &mo 2      &sk LSHIFT
+                                             CTHT(SPACE) &mo 1          &mo 2      &sk LSHIFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
