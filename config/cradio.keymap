@@ -7,6 +7,8 @@
 
 // Home row mods macro
 #define CTHT(k1) &ht LCTRL k1 
+#define TD_COM &tdd COMMA SEMI
+#define TD_DOT &tdd DOT COLON
 
 / {
     behaviors {
@@ -18,6 +20,12 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+        tdd: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -42,7 +50,7 @@
             &kp A      &kp R      &kp S      &kp T      &kp G          &kp M      &kp N      &kp E      &kp I      &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
+            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      TD_COM     TD_DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              CTHT(SPACE) &mo 1          &mo 2      &sk LSHIFT
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
