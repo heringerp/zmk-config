@@ -61,9 +61,9 @@
             &kp C_BRI_DN &kp N4   &kp N5     &kp N6     &kp ESC        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ 0        │  1       │  2       │  3       │  CAPS    │   │ HOME     │          │          │ END      │          │
-            &kp N0     &kp N1     &kp N2     &kp N3     &caps_word     &kp HOME   &kp PSCRN  &kp LS(PSCRN) &kp END    &trans
+            &kp N0     &kp N1     &kp N2     &kp N3     &caps_word     &kp HOME   &kp PSCRN  &kp LS(PSCRN) &kp END    &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans        &trans     &trans
+                                             &none     &trans        &trans     &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -72,15 +72,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  &       │  *       │  +       │  (       │   │  )       │  '       │  "       │  RALT    │          │
-           &kp C_VOL_UP &kp AMPS  &kp ASTRK  &kp PLUS   &kp LPAR       &kp RPAR   &kp APOS  &kp DQT     &kp RALT   &trans
+           &kp C_VOL_UP &kp AMPS  &kp ASTRK  &kp PLUS   &kp LPAR       &kp RPAR   &kp APOS  &kp DQT     &kp RALT   &kp LC(BSPC)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  $       │  %       │  ^       │  [       │   │  ]       │  -       │  =       │  `       │          │
-           &kp C_MUTE  &kp DLLR   &kp PRCNT  &kp CARET  &kp LBKT       &kp RBKT   &kp MINUS  &kp EQUAL  &kp GRAVE  &trans
+           &kp C_MUTE  &kp DLLR   &kp PRCNT  &kp CARET  &kp LBKT       &kp RBKT   &kp MINUS  &kp EQUAL  &kp GRAVE  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  !       │  @       │  #       │  {       │   │  }       │  _       │  |       │  ~       │  \       │
            &kp C_VOL_DN &kp EXCL  &kp AT     &kp HASH   &kp LBRC       &kp RBRC   &kp UNDER  &kp PIPE   &kp TILDE  &kp BSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &none     &trans         &trans     &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -89,15 +89,32 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │  WIN 7   │  WIN 8   │  WIN 9   │          │   │PROFILE 0 │          │          │          │  RESET   │
-           &sys_reset  &kp LG(N7) &kp LG(N8) &kp LG(N9) &trans       &bt BT_SEL 0 &kp LG(L)     &trans  &kp LG(LS(Q)) &sys_reset
+           &sys_reset  &kp LG(N7) &kp LG(N8) &kp LG(N9) &none           &none   &kp LG(L) &kp LG(ENTER)  &kp LG(LS(Q)) &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│  WIN 4   │  WIN 5   │  WIN 6   │          │   │PROFILE 1 │  SHIFT   │          │          │BOOTLOADER│
-          &bootloader  &kp LG(N4) &kp LG(N5) &kp LG(N6) &trans       &bt BT_SEL 1 &kp LSHFT  &kp LG(P)  &kp LG(LS(P)) &bootloader
+          &bootloader  &kp LG(N4) &kp LG(N5) &kp LG(N6) &none           &mo 4   &kp LSHFT  &kp LG(P)  &kp LG(LS(P)) &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  WIN 1   │  WIN 2   │  WIN 3   │          │   │PROFILE 2 │ CLEAR BT │          │          │          │
-            &trans     &kp LG(N1) &kp LG(N2) &kp LG(N3) &trans       &bt BT_SEL 2 &bt BT_CLR &trans     &trans     &trans
+            &none     &kp LG(N1) &kp LG(N2) &kp LG(N3) &none            &none   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &none     &trans         &trans     &none
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        fn_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ RESET    │  WIN 7   │  WIN 8   │  WIN 9   │          │   │PROFILE 0 │          │          │          │  RESET   │
+           &kp F10      &kp F7  &kp F8      &kp F9      &none           &none   &kp LC(LA(F7)) &kp LC(LA(F8)) &kp LC(LA(F9)) &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│BOOTLOADER│  WIN 4   │  WIN 5   │  WIN 6   │          │   │PROFILE 1 │  SHIFT   │          │          │BOOTLOADER│
+          &kp F11       &kp F4 &kp F5       &kp F6      &sk(LC(LALT))   &trans  &kp LC(LA(F4)) &kp LC(LA(F5)) &kp LC(LA(F6)) &none
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │  WIN 1   │  WIN 2   │  WIN 3   │          │   │PROFILE 2 │ CLEAR BT │          │          │          │
+            &kp F12     &kp F1 &kp F2       &kp F3      &none           &none   &bt LC(LA(F1)) &kp LC(LA(F2)) &kp LC(LA(F3)) &none
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &none     &trans         &trans     &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
