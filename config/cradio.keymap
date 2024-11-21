@@ -6,8 +6,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LALT k1  &ht LCTRL k2  &ht LGUI k3  &ht LSHFT k4
-#define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RGUI k2  &ht RCTRL k3  &ht LALT k4
 #define CTHT(k1) &ht LCTRL k1 
 
 / {
@@ -92,7 +90,7 @@
            &sys_reset  &kp LG(N7) &kp LG(N8) &kp LG(N9) &none           &none   &kp LG(L) &kp LG(ENTER)  &kp LG(LS(Q)) &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│BOOTLOADER│  WIN 4   │  WIN 5   │  WIN 6   │          │   │PROFILE 1 │  SHIFT   │          │          │BOOTLOADER│
-          &bootloader  &kp LG(N4) &kp LG(N5) &kp LG(N6) &none           &mo 4   &kp LSHFT  &kp LG(P)  &kp LG(LS(P)) &bootloader
+          &bootloader  &kp LG(N4) &kp LG(N5) &kp LG(N6) &none           &none   &kp LSHFT  &kp LG(P)  &kp LG(LS(P)) &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │  WIN 1   │  WIN 2   │  WIN 3   │          │   │PROFILE 2 │ CLEAR BT │          │          │          │
             &none     &kp LG(N1) &kp LG(N2) &kp LG(N3) &none            &none   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_CLR
@@ -102,21 +100,21 @@
             >;
         };
 
-        fn_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │  WIN 7   │  WIN 8   │  WIN 9   │          │   │PROFILE 0 │          │          │          │  RESET   │
-           &kp F10      &kp F7  &kp F8      &kp F9      &none           &none   &kp LC(LA(F7)) &kp LC(LA(F8)) &kp LC(LA(F9)) &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│  WIN 4   │  WIN 5   │  WIN 6   │          │   │PROFILE 1 │  SHIFT   │          │          │BOOTLOADER│
-          &kp F11       &kp F4 &kp F5       &kp F6      &sk(LC(LALT))   &trans  &kp LC(LA(F4)) &kp LC(LA(F5)) &kp LC(LA(F6)) &none
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  WIN 1   │  WIN 2   │  WIN 3   │          │   │PROFILE 2 │ CLEAR BT │          │          │          │
-            &kp F12     &kp F1 &kp F2       &kp F3      &none           &none   &bt LC(LA(F1)) &kp LC(LA(F2)) &kp LC(LA(F3)) &none
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &none     &trans         &trans     &none
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
+        // fn_layer {
+        //     bindings = <
+        // //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        // //│ RESET    │  WIN 7   │  WIN 8   │  WIN 9   │          │   │PROFILE 0 │          │          │          │  RESET   │
+        //    &kp F10      &kp F7  &kp F8      &kp F9      &none           &none   &kp LC(LA(F7)) &kp LC(LA(F8)) &kp LC(LA(F9)) &none
+        // //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        // //│BOOTLOADER│  WIN 4   │  WIN 5   │  WIN 6   │          │   │PROFILE 1 │  SHIFT   │          │          │BOOTLOADER│
+        //   &kp F11       &kp F4 &kp F5       &kp F6      &sk(LC(LALT))   &trans  &kp LC(LA(F4)) &kp LC(LA(F5)) &kp LC(LA(F6)) &none
+        // //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        // //│          │  WIN 1   │  WIN 2   │  WIN 3   │          │   │PROFILE 2 │ CLEAR BT │          │          │          │
+        //     &kp F12     &kp F1 &kp F2       &kp F3      &none           &none   &bt LC(LA(F1)) &kp LC(LA(F2)) &kp LC(LA(F3)) &none
+        // //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                                      &none     &trans         &trans     &none
+        // //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+        //     >;
+        // };
     };
 };
